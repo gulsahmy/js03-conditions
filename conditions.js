@@ -135,3 +135,42 @@ console.log(result);
 result = ""
 let myVar = result || "noname"
 console.log(myVar);
+
+
+const s1 = +prompt("1.sayiyi giriniz:")
+const islem = prompt("islemi giriniz: +, -, /, *")
+const s2 = +prompt("2.sayiyi giriniz")
+
+// if (!s1) {
+//   alert("lütfen geçerli bir sayi giriniz")
+// }
+
+if (isNaN(s1) || isNaN(s2)) {
+  alert("Lütfen geçerli bir sayı giriniz:")
+}
+
+if (islem === "/" && s2 === 0){
+  alert("sıfıra bolme hatası")
+}
+
+let yekun = 0
+
+switch (islem) {
+  case "+" :
+    yekun = s1 + s2
+    break 
+  case "-" :
+    yekun = s1 - s2
+    break 
+  case "/" :
+    yekun = s1 / s2
+    break 
+  case "*" :
+    yekun = s1 * s2
+    break
+  default:
+    alert("yanlıs islem")
+    break  
+}
+
+console.log(`${s1} ${islem} ${s2} = ${yekun.toFixed(2)}`);
